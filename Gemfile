@@ -4,11 +4,15 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 group :development do
+  gem 'sqlite3'
   gem 'pry-rails'
   gem 'awesome_print'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
@@ -48,3 +52,15 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#
+#
+#
+
+
+gem 'websocket-rails'
+
+gem 'devise' 
+
+
+
+
