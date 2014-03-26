@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140326054016) do
+ActiveRecord::Schema.define(version: 20140326060630) do
+
+  create_table "chat_logs", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "chat_room_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chat_room_users", force: true do |t|
+    t.integer  "chat_room_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "chat_rooms", force: true do |t|
     t.integer  "owner"
